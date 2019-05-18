@@ -8,7 +8,9 @@ app.use(body_parser.json());
 app.use((req, res, next) => {
     generated_id = Math.floor((Math.random() * 99999) + 0);
     generated_apiKey = require('./commons/generated_apiKey');
-
+    mongoose = require('mongoose');
+    mongooseObjectId = new mongoose.Types.ObjectId();
+    
     next();
 })
 app.use((req, res, next) => {

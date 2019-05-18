@@ -13,6 +13,7 @@ exports.store = async (req, res) => {
     }
 
     const createBank = await BankModel.create({
+        _id: mongooseObjectId,
         bank_id: generated_idBank,
         nama: nama,
         transfer_nonbank_cost: transfer_nonbank_cost,

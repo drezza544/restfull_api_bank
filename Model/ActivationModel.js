@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const ActivationMode = new mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     user_id: Number,
     bank_id: Number,
     nama_user: String,

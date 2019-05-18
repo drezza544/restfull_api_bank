@@ -19,6 +19,7 @@ exports.store = async (req, res) => {
         });
     }else {
         const createActivation = await ActivationModel.create({
+            _id: mongooseObjectId,
             user_id: user_id,
             bank_id: bank_id,
             nama_user: nama_user,

@@ -32,6 +32,7 @@ exports.store = async (req, res) => {
         });
     }else {
         const createUser = await UserModel.create({
+            _id: mongooseObjectId,
             api_key: generated_apiKey(25),
             user_id: generated_id,
             nama: nama,
@@ -42,7 +43,7 @@ exports.store = async (req, res) => {
                     alamat: alamat,
                     tgl_lahir: tgl_lahir,
                     phone: phone,
-                    saldo: "Null"
+                    saldo: 0
                 }
             ],
             pin: [

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const UserModel = new mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     api_key: String,
     user_id: Number,
     nama: String,
@@ -9,14 +10,14 @@ const UserModel = new mongoose.Schema({
         {
             alamat: String,
             tgl_lahir: Date,
-            phone: String,
-            saldo: String,
+            phone: Number,
+            saldo: Number,
         }
     ],
     pin: [
         {
             password_transaksi: String,
-            pin: {type: String, max: 6}
+            pin: {type: Number}
         }
     ]
     
