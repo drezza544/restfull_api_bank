@@ -24,6 +24,7 @@ const ActivationController = require('./Controller/ActivationController');
 const BankController = require('./Controller/BankController');
 const UserController = require('./Controller/UserController');
 const TransferController = require('./Controller/TransferController');
+const MutasiController = require('./Controller/MutasiController');
 
 app.post('/api/v1/register', RegisterController.store);
 app.post('/api/v1/login', LoginController.login);
@@ -43,6 +44,9 @@ app.put('/api/v1/bank/:bank_id', BankController.update);
 app.delete('/api/v1/bank/:bank_id', BankController.delete);
 
 app.post('/api/v1/transfer', TransferController.store);
+
+// app.get('/api/v1/mutasi', MutasiController.show);
+// app.get('/api/v1/mutasi/:mutasi_id', MutasiController.getById);
 
 app.listen(8000, function () {
     console.log("Server Is Running On Port: *8000");
